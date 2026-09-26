@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="ku">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#073f4d">
+  <title>Karta Kurdî — Nasnameya Dijîtal</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
+</head>
+<body>
+<header class="topbar">
+  <div class="brand"><span class="sun">☀</span><span>KARTA KURDÎ</span></div>
+  <nav>
+    <a href="#create">Çêkirin</a>
+    <a href="#about">Derbarê</a>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <div>
+      <div class="eyebrow">NASNAMEYA DIJÎTAL YA KURDISTANÊ</div>
+      <h1>Nasnameya te, <span>bi awayekî nû.</span></h1>
+      <p>Karta Kurdî platformeke modern e ji bo çêkirin, parvekirin û verastkirina nasnameya dijîtal.</p>
+      <a class="btn primary" href="#create">Karta xwe çêke</a>
+    </div>
+    <div class="hero-card mini-card">
+      <div class="flag"></div>
+      <div class="mini-content">
+        <div class="mini-photo" id="miniPhoto">AK</div>
+        <div><small>NAV / NAME</small><strong id="miniName">Awesta</strong></div>
+        <div><small>PAŞNAV / SURNAME</small><strong id="miniSurname">Egîd</strong></div>
+      </div>
+      <div class="mini-footer">KARTA KURDÎ • NASNAMEYA DIJÎTAL</div>
+    </div>
+  </section>
+
+  <section id="create" class="workspace">
+    <div class="panel form-panel">
+      <div class="section-head"><span class="step">01</span><div><h2>Karta xwe çêke</h2><p>Agahiyên xwe têkevin û pêşdîtina zindî bibînin.</p></div></div>
+      <form id="cardForm">
+        <label>Nav<input id="name" required maxlength="40" value="Awesta"></label>
+        <label>Paşnav<input id="surname" required maxlength="40" value="Egîd"></label>
+        <div class="grid2">
+          <label>Zayend<select id="gender"><option>Mêr</option><option>Jin</option><option>Nehat diyarkirin</option></select></label>
+          <label>Herêm<input id="region" maxlength="60" value="Kurdistan"></label>
+        </div>
+        <div class="grid2">
+          <label>Ziman / Zarav<input id="dialect" maxlength="80" value="Kurmancî"></label>
+          <label>Welat<input id="country" maxlength="60" value="Kurdistan"></label>
+        </div>
+        <label>Wêneya profîlê<input id="photo" type="file" accept="image/*"></label>
+        <label>Rêya parvekirinê <select id="visibility"><option value="public">Giştî</option><option value="private">Taybet</option></select></label>
+        <button class="btn primary full" type="submit">Karta dijîtal tomar bike</button>
+        <p id="status" class="status"></p>
+      </form>
+    </div>
+
+    <div class="preview-wrap">
+      <div class="preview-label">PÊŞDÎTINA KARTA TE</div>
+      <div class="id-card" id="idCard">
+        <div class="card-top">
+          <div class="card-brand"><span class="sun">☀</span><div><b>NASNAMEYA DIJÎTAL YA KURDISTANÊ</b><small>DIGITAL IDENTITY</small></div></div>
+          <div class="map-mark">K</div>
+        </div>
+        <div class="card-body">
+          <div class="portrait" id="portrait"><span id="initials">AE</span></div>
+          <div class="details">
+            <div><small>NAV / NAME</small><strong id="pName">Awesta</strong></div>
+            <div><small>PAŞNAV / SURNAME</small><strong id="pSurname">Egîd</strong></div>
+            <div><small>ZAYEND / GENDER</small><strong id="pGender">Mêr</strong></div>
+            <div><small>HERÊM / REGION</small><strong id="pRegion">Kurdistan</strong></div>
+            <div><small>ZARAVA / DIALECT</small><strong id="pDialect">Kurmancî</strong></div>
+            <div><small>WELAT / COUNTRY</small><strong id="pCountry">Kurdistan</strong></div>
+          </div>
+          <div class="qr" id="qr"></div>
+        </div>
+        <div class="card-bottom"><span id="cardId">KRD-000001</span><span>NAS-KURD • DIGITAL ID</span></div>
+      </div>
+      <button class="btn secondary" id="downloadBtn" type="button">Pêşdîtin / Print</button>
+    </div>
+  </section>
+
+  <section id="about" class="features">
+    <div><b>🔐 Rûmet û kontrol</b><p>Agahiyên ku tu parve dikî bi RLS û siyaseta Supabase ve têne parastin.</p></div>
+    <div><b>📱 Mobile-first</b><p>Li telefon, tablet û komputerê dixebite.</p></div>
+    <div><b>▣ QR verastkirin</b><p>Kodê QR dikare rûpela nasnameya dijîtal a kesane veke.</p></div>
+  </section>
+</main>
+
+<footer>KARTA KURDÎ · NASNAMEYA DIJÎTAL · © 2026</footer>
+<script src="app.js"></script>
+</body>
+</html>
