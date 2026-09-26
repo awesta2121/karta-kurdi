@@ -1,8 +1,8 @@
 // Karta Kurdî — Supabase configuration
 // Publishable/browser keys are designed to be used in the browser.
 // NEVER put a Supabase secret/service-role key here.
-const SUPABASE_URL = "PASTE_YOUR_SUPABASE_PROJECT_URL_HERE";
-const SUPABASE_PUBLISHABLE_KEY = "PASTE_YOUR_PUBLISHABLE_KEY_HERE";
+const SUPABASE_URL = "https://mxyfmibktytuqaloctbk.supabase.co";
+const SUPABASE_PUBLISHABLE_KEY = "sb_publishable_ceuR7RXYASW3fAwcpvMgtA_mnuYcbIx";
 
 let supabaseClient = null;
 if (SUPABASE_URL.startsWith("http") && !SUPABASE_URL.includes("PASTE_") &&
